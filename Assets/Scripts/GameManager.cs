@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (lives <= 0 && Input.anyKeyDown) {
+        if (lives <= 0 && Input.anyKey) {
             NewGame();
         }
     }
@@ -63,6 +64,17 @@ public class GameManager : MonoBehaviour
         }
 
         pacman.gameObject.SetActive(false);
+
+        Invoke("ExitScreen", 2);
+
+        Invoke("NewGame", 2);
+
+    }
+
+    private void ExitScreen()
+    {
+
+        SceneManager.LoadScene("Exit");
     }
 
     private void SetLives(int lives)
