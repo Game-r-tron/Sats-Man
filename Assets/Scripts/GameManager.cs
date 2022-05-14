@@ -65,15 +65,14 @@ public class GameManager : MonoBehaviour
 
         pacman.gameObject.SetActive(false);
 
-        Invoke("ExitScreen", 2);
+        PlayerPrefs.SetInt("Player Score", score);
 
-        Invoke("NewGame", 2);
+        Invoke("ExitScreen", 2);
 
     }
 
     private void ExitScreen()
     {
-
         SceneManager.LoadScene("Exit");
     }
 
