@@ -392,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 918157309}
     - target: {fileID: 1884389399565944631, guid: 8398b287235293d469d1683369c48531, type: 3}
       propertyPath: m_Name
-      value: Ghost_Inky
+      value: Ghost_Doge
       objectReference: {fileID: 0}
     - target: {fileID: 1884389399565944631, guid: 8398b287235293d469d1683369c48531, type: 3}
       propertyPath: m_IsActive
@@ -7731,7 +7731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660416300114475820, guid: 0d1f951e4ac24fe478d688dbf86a5c39, type: 3}
       propertyPath: m_Name
-      value: Ghost_Clyde
+      value: Ghost_Lite
       objectReference: {fileID: 0}
     - target: {fileID: 5660416300114475820, guid: 0d1f951e4ac24fe478d688dbf86a5c39, type: 3}
       propertyPath: m_IsActive
@@ -7918,7 +7918,7 @@ PrefabInstance:
       objectReference: {fileID: 918157309}
     - target: {fileID: 2336075042848322182, guid: 25f5544974e8f0b409f1c5070cbb2c0e, type: 3}
       propertyPath: m_Name
-      value: Ghost_Blinky
+      value: Ghost_Dollar
       objectReference: {fileID: 0}
     - target: {fileID: 2336075042848322182, guid: 25f5544974e8f0b409f1c5070cbb2c0e, type: 3}
       propertyPath: m_IsActive
@@ -10816,7 +10816,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1814567404648583842, guid: 87e861fcfe4201c4d8213cba69c0f024, type: 3}
       propertyPath: m_Name
-      value: Ghost_Pinky
+      value: Ghost_Eth
       objectReference: {fileID: 0}
     - target: {fileID: 1814567404648583842, guid: 87e861fcfe4201c4d8213cba69c0f024, type: 3}
       propertyPath: m_IsActive

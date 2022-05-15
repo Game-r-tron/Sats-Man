@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         SetScore(0);
-        SetLives(3);
+        SetLives(1);
         NewRound();
     }
 
@@ -66,14 +66,8 @@ public class GameManager : MonoBehaviour
         pacman.gameObject.SetActive(false);
 
         PlayerPrefs.SetInt("Player Score", score);
+        SceneManager.LoadScene("Score");
 
-        Invoke("ExitScreen", 2);
-
-    }
-
-    private void ExitScreen()
-    {
-        SceneManager.LoadScene("Exit");
     }
 
     private void SetLives(int lives)
