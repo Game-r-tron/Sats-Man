@@ -22,30 +22,24 @@ public class ScoreManager : MonoBehaviour
     }
 
     public Text scoreText;
-    public TextMeshProUGUI twitterField;
+    public TMP_InputField twitterField;
     public String url;
     public Player player = new Player();
   
     private void Awake()
     {
         player.score_value = PlayerPrefs.GetInt("Player Score");
-        player.score_date = DateTime.Now.ToString("s");
         scoreText.text = player.score_value.ToString();
-    }
-
-    private void Start()
-    {
-        //Submit();
-        //Invoke("Replay", 2);
     }
 
     public void Submit()
     {
-        player.twitter_handle = twitterField.text;
+        player.score_date = DateTime.Now.ToString("s");
+        player.twitter_handle = twitterField.text.TrimStart('@');
         postScore();
     }
 
-    private void Replay()
+    public void Replay()
     {
         SceneManager.LoadScene("Pacman");
     }
@@ -66,6 +60,7 @@ public class ScoreManager : MonoBehaviour
         request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("Accept", "application/json");
     
         request.SendWebRequest();
 
