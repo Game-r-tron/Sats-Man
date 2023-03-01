@@ -11,7 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score.unity
     guid: 8b4b85222e0a64f8fa64c63af5f92b77
-  - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: 06d5bd0bc0f1a4feaa2d4b74f2dc2268
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 82519ca0302ad4f49895975472295094, type: 2}

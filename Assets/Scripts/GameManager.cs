@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         pacman.gameObject.SetActive(false);
 
         PlayerPrefs.SetInt("Player Score", score);
-        SceneManager.LoadScene("Score");
+        SceneManager.LoadScene("Pacman");
 
     }
 
