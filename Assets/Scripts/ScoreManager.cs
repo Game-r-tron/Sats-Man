@@ -10,6 +10,7 @@ using TMPro;
 using SimpleJSON;
 using ZXing;
 using ZXing.QrCode;
+//using Config;
 
 
 public class ScoreManager : MonoBehaviour
@@ -32,14 +33,14 @@ public class ScoreManager : MonoBehaviour
     public Image qrCodeImage;
     public Sprite doge;
     public Image bolt;
-    public string token ="SECRET";
-    
+    string token;
   
-    private void Awake()
+    private void Start()
     {
         player.score_value = PlayerPrefs.GetInt("Player Score");
         scoreText.text = player.score_value.ToString();
-        bolt.enabled = false;
+        token = ApiToken.Value;
+        //bolt.enabled = false;
         StartCoroutine(PostScore());
     }    
 

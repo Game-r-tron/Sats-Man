@@ -21,13 +21,6 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
 
-    private void Update()
-    {
-        if (lives <= 0 && Input.anyKey) {
-            NewGame();
-        }
-    }
-
     private void NewGame()
     {
         SetScore(0);
@@ -58,15 +51,8 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         gameOverText.enabled = true;
-
-        for (int i = 0; i < ghosts.Length; i++) {
-            ghosts[i].gameObject.SetActive(false);
-        }
-
-        pacman.gameObject.SetActive(false);
-
         PlayerPrefs.SetInt("Player Score", score);
-        SceneManager.LoadScene("Pacman");
+        SceneManager.LoadScene("Score");
 
     }
 
