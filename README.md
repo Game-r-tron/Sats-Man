@@ -1,9 +1,5 @@
-# Pac-man (2D)
+# Sats-Man
 
-> Pac-Man is a maze action game developed and released by Namco for arcades in 1980. The player controls Pac-Man, who must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing dots called "Power Pellets" causes the ghosts to turn blue, allowing Pac-Man to eat them for bonus points.
+> Sats-Man is a maze action game based upon the classic Pac_man game from 1980! This time the ghosts are sh*tcoins and you can win sats!
 
-- **Difficulty**: Advanced
-- **Topics**: Sprites, Tilemaps, AI
-- **Version**: Unity 2021.1
-- [**Download**](https://github.com/zigurous/unity-pacman-tutorial/archive/refs/heads/main.zip)
-- [**Watch Video**](https://youtu.be/TKt_VlMn_aA)
+Credit to [@zigurous](https://github.com/zigurous) for the base game.
