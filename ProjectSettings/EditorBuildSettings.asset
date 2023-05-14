@@ -5,11 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Pacman.unity
+  - enabled: 0
+    path: Assets/Scenes/PacmanOG.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/ScoreOG.unity
+    guid: 8b4b85222e0a64f8fa64c63af5f92b77
   - enabled: 1
     path: Assets/Scenes/Score.unity
-    guid: 8b4b85222e0a64f8fa64c63af5f92b77
+    guid: 2fa39b1f1fa784558984d6085bdc4c37
+  - enabled: 1
+    path: Assets/Scenes/Pacman.unity
+    guid: 7de45df04f67746a7bb48dfed84430c5
+  - enabled: 0
+    path: Assets/Scenes/PacmanPicade.unity
+    guid: 63fb6d0173ce14616a452305765cc4c2
+  - enabled: 0
+    path: Assets/Scenes/ScoreMiamiSimple.unity
+    guid: 8ee1c673eb1cd41ef9ecbf2078e25464
+  - enabled: 0
+    path: Assets/Scenes/ScorePicade.unity
+    guid: bf3dafaca16e14a038a2a63c4f49e9fe
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 82519ca0302ad4f49895975472295094, type: 2}
+  m_UseUCBPForAssetBundles: 0

@@ -11,7 +11,7 @@ using SimpleJSON;
 using ZXing;
 using ZXing.QrCode;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManagerArcade : MonoBehaviour
 {
     [Serializable]
     public class Player
@@ -30,8 +30,6 @@ public class ScoreManager : MonoBehaviour
     public Image qrCodeImage;
     public Image boltImage;
     public Image cameraImage;
-    public Button submitScoreButton;
-    public Button payButton;
     string token;
   
     private void Start()
@@ -43,7 +41,7 @@ public class ScoreManager : MonoBehaviour
         cameraImage.enabled = false;
         payText.enabled = false;
         submitText.enabled = false;
-        submitScoreButton.gameObject.SetActive(false);
+
         StartCoroutine(PostScore());
     }    
 
@@ -132,9 +130,8 @@ public class ScoreManager : MonoBehaviour
     {
         boltImage.enabled = false;
         payText.enabled = false;
-        payButton.gameObject.SetActive(false);
         
-        string paymentUrl = "https://games.gamertron.net/satsman-scoreboard/enter-details/" + player.id;
+        string paymentUrl = "https://games.gamertron.net/satsman-scoreboard/enter-details/" + player.id + "/miami23";
         Debug.Log("paymentUrl: " + paymentUrl);
         
         //Construct new QR Code
@@ -142,8 +139,6 @@ public class ScoreManager : MonoBehaviour
         qrCodeImage.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
         cameraImage.enabled = true;
         submitText.enabled = true;
-                
-        submitScoreButton.gameObject.SetActive(true);
     }
 
     public void Replay()

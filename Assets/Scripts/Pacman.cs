@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Movement))]
 public class Pacman : MonoBehaviour
@@ -10,6 +11,10 @@ public class Pacman : MonoBehaviour
     public Movement movement { get; private set; }
 
     public Vector2 moveVal;
+
+    public GameObject pauseMenu;
+    private bool isPaused;
+
 
     private void Awake()
     {
@@ -37,7 +42,25 @@ public class Pacman : MonoBehaviour
         {
             movement.SetDirection(moveVal);
         }
-    }     
+    }
+
+    public void OnRestart(InputValue value)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Pacman");
+    }
+
+    public void OnPause(InputValue value)
+    {
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+    }  
 
     public void ResetState()
     {
@@ -60,5 +83,30 @@ public class Pacman : MonoBehaviour
         deathSequence.spriteRenderer.enabled = true;
         deathSequence.Restart();
     }
+    
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
 
+    void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void QuitToMainMenu()
+    {
+        Time.timeScale = 1f;
+        // Replace "MainMenu" with the name of your main menu scene
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
