@@ -5,17 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/PacmanOG.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/ScoreOG.unity
+    guid: 8b4b85222e0a64f8fa64c63af5f92b77
   - enabled: 1
     path: Assets/Scenes/Pacman.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 7de45df04f67746a7bb48dfed84430c5
   - enabled: 1
     path: Assets/Scenes/Score.unity
-    guid: 8b4b85222e0a64f8fa64c63af5f92b77
-  - enabled: 0
-    path: Assets/Scenes/PacmanMiami.unity
-    guid: 7de45df04f67746a7bb48dfed84430c5
-  - enabled: 0
-    path: Assets/Scenes/ScoreMiami.unity
     guid: 2fa39b1f1fa784558984d6085bdc4c37
   - enabled: 0
     path: Assets/Scenes/PacmanPicade.unity
