@@ -44,24 +44,6 @@ public class Pacman : MonoBehaviour
         }
     }
 
-    public void OnRestart(InputValue value)
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Pacman");
-    }
-
-    public void OnPause(InputValue value)
-    {
-            if (isPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-    }  
-
     public void ResetState()
     {
         enabled = true;
@@ -83,7 +65,19 @@ public class Pacman : MonoBehaviour
         deathSequence.spriteRenderer.enabled = true;
         deathSequence.Restart();
     }
-    
+
+    public void OnPause()
+    {
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+    }  
+
     public void Resume()
     {
         pauseMenu.SetActive(false);
@@ -98,15 +92,10 @@ public class Pacman : MonoBehaviour
         isPaused = true;
     }
 
-    public void QuitToMainMenu()
+    public void OnRestart()
     {
         Time.timeScale = 1f;
-        // Replace "MainMenu" with the name of your main menu scene
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Pacman");
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }

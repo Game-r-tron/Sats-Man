@@ -2,24 +2,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class GamePlayControl : MonoBehaviour
+public class GameControl : MonoBehaviour
 {
 
     public GameObject pauseMenu;
     private bool isPaused;
+
+    private float timeElapsed = 0f;
+
+    private void Update()
+    {
+        timeElapsed += Time.deltaTime;
+    }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnPause()
     {
             if (isPaused)
@@ -48,8 +43,13 @@ public class GamePlayControl : MonoBehaviour
 
     public void OnRestart()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Pacman");
+
+        if (timeElapsed >= 2f)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Pacman");
+        }
+
     }
 
     public void QuitToMainMenu()
@@ -63,6 +63,5 @@ public class GamePlayControl : MonoBehaviour
     {
         Application.Quit();
     }
-
 
 }
