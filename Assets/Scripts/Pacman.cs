@@ -95,7 +95,7 @@ public class Pacman : MonoBehaviour
     public void OnRestart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Pacman");
+        SceneManager.LoadScene("Intro");
     }
 
 }

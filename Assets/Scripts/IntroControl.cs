@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class GameControl : MonoBehaviour
+public class IntroControl : MonoBehaviour
 {
 
     public GameObject pauseMenu;
@@ -13,11 +13,6 @@ public class GameControl : MonoBehaviour
     private void Update()
     {
         timeElapsed += Time.deltaTime;
-
-        if (timeElapsed > 60f)
-        {
-            SceneManager.LoadScene("Intro");
-        }
     }
     
     public void OnPause()
@@ -52,7 +47,7 @@ public class GameControl : MonoBehaviour
         if (timeElapsed >= 2f)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Intro");
+            SceneManager.LoadScene("Pacman");
         }
 
     }
